@@ -10,7 +10,6 @@ describe 'as a visitor' do
 
       visit song_path(@song_1.slug)
 
-
       expect(page).to have_content ("Rating: #{@song_1.rating}")
     end
   end
