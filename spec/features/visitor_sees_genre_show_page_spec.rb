@@ -49,3 +49,15 @@ end
 # - I should see at least 2 songs listed for a genre
 # - Also include 1 or more songs that are NOT associated with this genre and ensure
 #   they do not appear on the page
+
+
+# User Story 8:
+#
+# As a Visitor,
+#   When I visit a genre show page,
+#     I see the average rating for all songs in this genre
+#
+# Testing requirements:
+# - I should add at least 2 songs for this genre
+# - Also include 1 or more songs NOT associated with this genre to ensure these
+#   other songs are not included in the average rating
