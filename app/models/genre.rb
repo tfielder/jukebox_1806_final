@@ -5,6 +5,7 @@ class Genre < ApplicationRecord
   validates_presence_of :name
 
   def avg_rating
-    Genre.songs.average(:rating)
+  
+    Genre.joins(:songs).average(:rating)
   end
 end

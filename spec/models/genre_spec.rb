@@ -24,7 +24,7 @@ describe Genre, type: :model do
       @song_1.genres << @genre_1
       @song_2.genres << @genre_1
 
-      expect("#{@genre_1.avg_rating}").to eq(3)
+      expect("#{@genre_1.avg_rating}").to eq("3.0")
     end
   end
 end
