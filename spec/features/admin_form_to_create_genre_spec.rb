@@ -28,9 +28,9 @@ describe 'as an admin' do
     it 'allows admin to fill out form and see new genre' do
       visit genres_path
 
-      fill_in "name", with: "name1"
+      fill_in "Name", with: "name1"
 
-      click_on "Submit"
+      click_on "Create Genre"
 
       visit genres_path
 
