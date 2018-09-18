@@ -2,5 +2,14 @@
 <p>by <%= @song.artist.name %> </p>
 
 <p>
+  Genres for this Song:
+</p>
+<% @song.genres.each do |g| %>
+  <p>
+    <%= g.name %>
+  </p>
+<% end %>
+</br>
+<p>
   Rating: <%= @song.rating %>
 </p>

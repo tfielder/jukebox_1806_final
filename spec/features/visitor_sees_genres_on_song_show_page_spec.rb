@@ -22,7 +22,7 @@ describe 'as visitor' do
     end
      it "show genre names under a heading that says Genres for this Song:
       and the genres listed are only the genres associated with this song." do
-        visit song_path(@song_1)
+        visit song_path(@song_1.slug)
 
         expect(page).to have_content("Genres for this Song:")
 

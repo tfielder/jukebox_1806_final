@@ -4,4 +4,10 @@ class Admin::GenresController < Admin::BaseController
     @genre.save
     redirect_to genres_path
   end
+
+  private
+  def genre_params
+    params.require(:genre).permit(:name)
+  end
+
 end
