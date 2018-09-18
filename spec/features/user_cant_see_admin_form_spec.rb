@@ -5,6 +5,9 @@ describe 'as a visitor' do
     it 'doesnt show creation form for genre' do
       visit genres_path
 
+      expect(page).to have_content("#{@genre_1.name}")
+      expect(page).to have_content("#{@genre_2.name}")
+
       expect(page).to_not have_content("Create a Genre")
       expect(page).to_not have_content("Submit")
     end
