@@ -14,4 +14,5 @@ describe 'song index' do
     expect(page).to have_content(song_2.title)
     expect(page).to have_content("Play Count: #{song_2.play_count}")
   end
+
 end

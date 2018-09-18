@@ -15,12 +15,14 @@ class SongsController < ApplicationController
   end
 
   def show
-    @song = Song.find_by_slug(params[:slug])
+    @song = Song.find_by(slug: params[:slug])
   end
 
   private
 
   def song_params
-    params.require(:song).permit(:title, :length, :play_count)
+    params.require(:song).permit(:title, :length, :play_count, :slug)
   end
+
+
 end

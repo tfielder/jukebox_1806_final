@@ -1,0 +1,20 @@
+<p>
+  Genres:
+</p>
+
+<% @genres.each do |g| %>
+<p>
+  <%= link_to g.name, genre_path(g) %>
+</p>
+<% end %>
+
+<% if current_admin? %>
+  <p>
+    Create a Genre:
+  </p>
+  <%= form_for [:admin, @genre] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+  <% end %>
+<% end  %>
