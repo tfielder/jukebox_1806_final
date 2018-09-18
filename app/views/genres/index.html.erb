@@ -8,11 +8,11 @@
 </p>
 <% end %>
 
-<% if current_user && current_user.admin? %>
+<% if current_admin? %>
   <p>
     Create a Genre:
   </p>
-  <%= form_for @genre do |f| %>
+  <%= form_for [:admin, @genre] do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.submit %>
