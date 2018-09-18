@@ -34,6 +34,8 @@ describe 'as an admin' do
 
       visit genres_path
 
+      expect(page).to have_content("#{@genre_1.name}")
+      expect(page).to have_content("#{@genre_2.name}")
       expect(page).to have_content("name1")
     end
 
