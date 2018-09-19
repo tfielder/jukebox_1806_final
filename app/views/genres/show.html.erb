@@ -3,7 +3,7 @@
 </p>
 
 <p>
-  Genre Songs
+  Songs with this Genre:
 </p>
 
 <% @genre.songs.each do |song| %>
@@ -12,3 +12,9 @@
   </p>
 
 <% end %>
+
+<br/>
+  <p>
+    Average Rating for Songs with This Genre: <%= @genre.avg_rating %>
+  </p>
+</br/>
